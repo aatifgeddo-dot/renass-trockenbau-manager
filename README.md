@@ -1,1 +1,1 @@
-<h1>Renaß Trockenbau-Manager</h1>h1>
+<h1>RENAß TROCKENBAU-MANAGE</h1>
