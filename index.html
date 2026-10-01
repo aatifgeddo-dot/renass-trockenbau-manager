@@ -1,1 +1,964 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>RENAß TROCKENBAU MANAGE | Hannover</title>
+
+<meta name="description"
+content="RENAß TROCKENBAU MANAGE – Professioneller Trockenbau und Innenausbau in Hannover und Umgebung.">
+
+<style>
+:root {
+    --red: #d71920;
+    --red-dark: #b51218;
+    --blue: #062d5b;
+    --blue-light: #123f70;
+    --white: #ffffff;
+    --light: #f4f7fa;
+    --text: #193452;
+    --gray: #65758a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 94px;
+    background: white;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar {
+    width: 92%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Logo */
+
+.logo-symbol {
+    width: 58px;
+    height: 65px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.logo-red {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 58px;
+    background: var(--red);
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
+}
+
+.logo-blue {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 35px;
+    height: 58px;
+    background: var(--blue);
+    clip-path: polygon(0 0, 100% 25%, 100% 70%, 55% 55%, 55% 100%, 0 78%);
+}
+
+.logo-text strong {
+    display: block;
+    color: var(--red);
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo-text span {
+    display: block;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 36px 0;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--red);
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: var(--red);
+    left: 0;
+    right: 0;
+    bottom: 25px;
+}
+
+.nav-button {
+    background: var(--red);
+    color: white !important;
+    padding: 13px 24px !important;
+    border-radius: 30px;
+}
+
+.nav-button:hover {
+    background: var(--red-dark);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 510px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,36,73,.98) 0%,
+            rgba(3,36,73,.94) 38%,
+            rgba(3,36,73,.55) 62%,
+            rgba(3,36,73,.15) 100%
+        ),
+        url("trockenbau.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 92%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 72px 0;
+    color: white;
+}
+
+.welcome {
+    font-size: 17px;
+    letter-spacing: 4px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 82px);
+    line-height: .95;
+    font-weight: 900;
+    margin-bottom: 4px;
+    color: var(--red);
+}
+
+.hero h2 {
+    color: white;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+    max-width: 580px;
+    margin-bottom: 10px;
+}
+
+.hero-sub {
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 27px;
+    border-radius: 30px;
+    font-weight: 800;
+    display: inline-block;
+    transition: .3s;
+}
+
+.btn-red {
+    background: var(--red);
+    color: white;
+}
+
+.btn-red:hover {
+    background: var(--red-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--blue);
+}
+
+/* Hannover badge */
+
+.hannover {
+    position: absolute;
+    right: 7%;
+    top: 70px;
+    color: var(--blue);
+    background: rgba(255,255,255,.9);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 900;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 70px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-title small {
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    color: var(--blue);
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+.section-title p {
+    color: var(--gray);
+    max-width: 750px;
+    margin: 12px auto 0;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: white;
+}
+
+.service-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.service {
+    background: #f7f9fb;
+    border: 1px solid #e1e8ef;
+    border-radius: 10px;
+    padding: 25px 13px;
+    text-align: center;
+    transition: .3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.service-icon {
+    font-size: 42px;
+    margin-bottom: 13px;
+}
+
+.service h3 {
+    color: var(--blue);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.service p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #f5f7f9;
+    padding: 0;
+}
+
+.about-wrapper {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 43% 57%;
+    min-height: 330px;
+}
+
+.about-image {
+    min-height: 330px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6,45,91,.2),
+            rgba(6,45,91,.1)
+        ),
+        url("trockenbau-innenausbau.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.about-content {
+    padding: 55px 60px;
+    background: white;
+}
+
+.about-content small {
+    color: var(--red);
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.about-content h2 {
+    color: var(--blue);
+    font-size: 28px;
+    margin: 8px 0 16px;
+}
+
+.about-content p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.qualities {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.quality {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.quality span {
+    color: var(--red);
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background:
+        linear-gradient(
+            rgba(4,39,76,.97),
+            rgba(4,39,76,.97)
+        );
+    color: white;
+    padding: 50px 5%;
+}
+
+.contact-wrapper {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1.4fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.contact small {
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact h2 {
+    font-size: 25px;
+    margin-top: 6px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.contact-box strong {
+    display: block;
+}
+
+.contact-box span,
+.contact-box a {
+    color: #dbe4ee;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 20px 5%;
+    background: white;
+    color: var(--blue);
+}
+
+.footer-wrapper {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo .logo-symbol {
+    transform: scale(.6);
+    transform-origin: left center;
+    width: 40px;
+    margin-right: -12px;
+}
+
+.footer-logo strong {
+    color: var(--red);
+}
+
+.footer-logo span {
+    display: block;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 900;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 950px) {
+
+    nav {
+        display: none;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        min-height: 280px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    header {
+        height: 78px;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        padding-top: 55px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hannover {
+        top: auto;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .qualities {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+<div class="navbar">
+
+<a href="#start" class="logo">
+
+    <div class="logo-symbol">
+        <div class="logo-red"></div>
+        <div class="logo-blue"></div>
+    </div>
+
+    <div class="logo-text">
+        <strong>RENAß</strong>
+        <span>TROCKENBAU MANAGE</span>
+    </div>
+
+</a>
+
+<nav>
+    <a href="#start" class="active">Startseite</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#projekte">Projekte</a>
+    <a href="#kontakt">Kontakt</a>
+
+    <a href="#kontakt" class="nav-button">
+        Jetzt anfragen →
+    </a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="start">
+
+<div class="hero-content">
+
+    <div class="welcome">
+        WILLKOMMEN BEI
+    </div>
+
+    <h1>RENAß</h1>
+
+    <h2>
+        TROCKENBAU MANAGE
+    </h2>
+
+    <div class="hero-description">
+        Ihr Partner für professionellen Trockenbau
+        in Hannover.
+    </div>
+
+    <div class="hero-sub">
+        Qualität. Präzision. Zuverlässigkeit.
+    </div>
+
+    <div class="hero-buttons">
+
+        <a href="#leistungen" class="btn btn-red">
+            Unsere Leistungen →
+        </a>
+
+        <a href="#kontakt" class="btn btn-outline">
+            Kontakt aufnehmen →
+        </a>
+
+    </div>
+
+</div>
+
+<div class="hannover">
+    📍 Hannover
+</div>
+
+</section>
+
+
+<!-- =========================
+     LEISTUNGEN
+========================= -->
+
+<section class="section services" id="leistungen">
+
+<div class="section-title">
+
+    <small>UNSERE LEISTUNGEN</small>
+
+    <h2>
+        Professionelle Trockenbau-Lösungen
+    </h2>
+
+    <p>
+        Wir bieten Ihnen ein breites Spektrum an
+        Trockenbau- und Innenausbauleistungen –
+        sauber, zuverlässig und termingerecht.
+    </p>
+
+</div>
+
+
+<div class="service-grid">
+
+    <div class="service">
+        <div class="service-icon">▱</div>
+        <h3>Trockenbau</h3>
+        <p>
+            Trennwände, Vorsatzschalen,
+            Decken und mehr.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-icon">⌂</div>
+        <h3>Innenausbau</h3>
+        <p>
+            Moderne und funktionale
+            Raumkonzepte.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-icon">▤</div>
+        <h3>Decken & Wände</h3>
+        <p>
+            Individuelle Lösungen
+            für jeden Raum.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-icon">◒</div>
+        <h3>Spachtelarbeiten</h3>
+        <p>
+            Perfekte Oberflächen
+            für höchste Ansprüche.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-icon">▰</div>
+        <h3>Renovierung</h3>
+        <p>
+            Fachgerechte Modernisierung
+            und Sanierung.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-icon">▥</div>
+        <h3>Gewerbebau</h3>
+        <p>
+            Trockenbau für Büros,
+            Praxen und Gewerbeobjekte.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ÜBER UNS
+========================= -->
+
+<section class="about" id="ueber-uns">
+
+<div class="about-wrapper">
+
+    <div class="about-image"></div>
+
+    <div class="about-content">
+
+        <small>ÜBER UNS</small>
+
+        <h2>
+            RENAß TROCKENBAU MANAGE
+        </h2>
+
+        <p>
+            Wir sind Ihr zuverlässiger Partner für
+            hochwertige Trockenbauarbeiten in Hannover
+            und Umgebung.
+        </p>
+
+        <p>
+            Mit Erfahrung, Fachwissen und einem hohen
+            Anspruch an Qualität realisieren wir Projekte
+            von der Planung bis zur Fertigstellung.
+        </p>
+
+        <div class="qualities">
+
+            <div class="quality">
+                <span>✓</span>
+                Saubere Arbeit
+            </div>
+
+            <div class="quality">
+                <span>✓</span>
+                Erfahrenes Team
+            </div>
+
+            <div class="quality">
+                <span>✓</span>
+                Termintreu
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROJEKTE
+========================= -->
+
+<section class="section" id="projekte">
+
+<div class="section-title">
+
+    <small>UNSERE PROJEKTE</small>
+
+    <h2>
+        Ihr Projekt in guten Händen
+    </h2>
+
+    <p>
+        Professionelle Lösungen für private,
+        gewerbliche und individuelle Bauprojekte.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     KONTAKT
+========================= -->
+
+<section class="contact" id="kontakt">
+
+<div class="contact-wrapper">
+
+    <div>
+        <small>KONTAKT</small>
+
+        <h2>
+            Sprechen Sie mit uns
+        </h2>
+
+        <p>
+            Wir freuen uns auf Ihre Anfrage.
+        </p>
+    </div>
+
+
+    <div class="contact-box">
+
+        <div class="contact-icon">📍</div>
+
+        <div>
+            <strong>Standort</strong>
+            <span>Hannover, Niedersachsen</span>
+        </div>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <div class="contact-icon">☎</div>
+
+        <div>
+            <strong>Telefon</strong>
+            <a href="tel:+4917612345678">
+                +49 176 12345678
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <div class="contact-icon">✉</div>
+
+        <div>
+            <strong>E-Mail</strong>
+            <a href="mailto:info@renass-trockenbau-manage.de">
+                info@renass-trockenbau-manage.de
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-wrapper">
+
+    <div class="footer-logo">
+
+        <div class="logo-symbol">
+            <div class="logo-red"></div>
+            <div class="logo-blue"></div>
+        </div>
+
+        <div>
+            <strong>RENAß</strong>
+            <span>TROCKENBAU MANAGE</span>
+        </div>
+
+    </div>
+
+    <p>
+        © 2026 RENAß TROCKENBAU MANAGE – Hannover
+    </p>
+
+    <p>
+        Impressum &nbsp; | &nbsp; Datenschutz
+    </p>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
