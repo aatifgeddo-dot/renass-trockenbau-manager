@@ -1,3 +1,3663 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
 
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="RENASS TROCKENBAU MANAGER – Professioneller Trockenbau, Innenausbau, Gipskarton, Decken, Trennwände, Dämmung, Renovierung und Malerarbeiten in Hannover und Niedersachsen.">
+
+    <meta name="keywords"
+          content="Trockenbau Hannover, RENASS Trockenbau, Innenausbau Hannover, Gipskarton, Trennwände, Decken, Dämmung, Renovierung">
+
+    <meta name="author"
+          content="RENASS TROCKENBAU MANAGER">
+
+    <meta name="theme-color"
+          content="#0b3158">
+
+    <title>
+        RENASS TROCKENBAU MANAGER | Hannover
+    </title>
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        :root {
+            --red: #d71920;
+            --red-dark: #ae1117;
+            --blue: #0b3158;
+            --blue-dark: #071f39;
+            --blue-light: #174c7d;
+
+            --white: #ffffff;
+            --black: #111827;
+
+            --background: #f4f7fa;
+            --text: #16263a;
+            --muted: #657487;
+            --border: #dfe6ed;
+
+            --shadow:
+                0 20px 50px rgba(11, 49, 88, 0.12);
+
+            --radius: 20px;
+
+            --transition:
+                all 0.3s ease;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: var(--text);
+
+            background: var(--white);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+
+        .container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+        }
+
+
+        .section {
+            padding: 90px 0;
+        }
+
+
+        .section-light {
+            background: var(--background);
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .topbar {
+            background: var(--blue-dark);
+            color: var(--white);
+        }
+
+
+        .topbar-inner {
+            min-height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            font-size: 13px;
+        }
+
+
+        .top-contact {
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 24px;
+        }
+
+
+        .top-contact span {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+
+        .top-social {
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+
+        .top-social a {
+            transition: var(--transition);
+        }
+
+
+        .top-social a:hover {
+            color: #ff4249;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .navbar {
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(255,255,255,0.97);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .nav-inner {
+            min-height: 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+
+        .logo {
+            width: 225px;
+
+            height: 68px;
+
+            object-fit: contain;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 24px;
+        }
+
+
+        .nav-links a {
+            position: relative;
+
+            padding: 28px 0;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            transition: var(--transition);
+        }
+
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 100%;
+
+            bottom: 18px;
+
+            height: 3px;
+
+            background: var(--red);
+
+            transition: var(--transition);
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--red);
+        }
+
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            right: 0;
+        }
+
+
+        .header-button {
+            background: var(--red);
+
+            color: var(--white);
+
+            padding: 13px 20px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            transition: var(--transition);
+        }
+
+
+        .header-button:hover {
+            background: var(--red-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+        .menu-button {
+            display: none;
+
+            border: 0;
+
+            background: transparent;
+
+            color: var(--blue);
+
+            font-size: 30px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        .mobile-menu {
+            display: none;
+
+            background: var(--white);
+
+            border-top:
+                1px solid var(--border);
+
+            box-shadow:
+                0 15px 30px rgba(0,0,0,0.08);
+        }
+
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+
+        .mobile-menu a {
+            display: block;
+
+            padding: 15px 4%;
+
+            border-bottom:
+                1px solid var(--border);
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 610px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background-color: var(--blue);
+
+            background-image:
+                url("hero-trockenbau.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4,26,47,0.97) 0%,
+                    rgba(7,40,69,0.88) 35%,
+                    rgba(7,40,69,0.42) 65%,
+                    rgba(7,40,69,0.05) 100%
+                );
+        }
+
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 720px;
+
+            padding: 80px 0;
+
+            color: var(--white);
+        }
+
+
+        .hero-label {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+
+        .hero-label::before {
+            content: "";
+
+            width: 40px;
+
+            height: 4px;
+
+            border-radius: 5px;
+
+            background: var(--red);
+        }
+
+
+        .hero h1 {
+            margin-top: 18px;
+
+            font-size:
+                clamp(42px, 7vw, 78px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            font-weight: 950;
+        }
+
+
+        .hero h1 .red {
+            color: var(--red);
+        }
+
+
+        .hero h2 {
+            margin-top: 22px;
+
+            font-size:
+                clamp(20px, 3vw, 31px);
+
+            line-height: 1.2;
+        }
+
+
+        .hero-text {
+            max-width: 650px;
+
+            margin-top: 18px;
+
+            color: #e8f0f7;
+
+            font-size: 17px;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-top: 30px;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 14px 23px;
+
+            border-radius: 999px;
+
+            border: 2px solid transparent;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+        }
+
+
+        .btn-red {
+            background: var(--red);
+
+            color: var(--white);
+        }
+
+
+        .btn-red:hover {
+            background: #ee2028;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(215,25,32,0.25);
+        }
+
+
+        .btn-outline {
+            border-color: var(--white);
+
+            color: var(--white);
+        }
+
+
+        .btn-outline:hover {
+            background: var(--white);
+
+            color: var(--blue);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FLOATING CONTACT
+        ===================================================== */
+
+        .floating-contact {
+            position: fixed;
+
+            right: 18px;
+
+            top: 45%;
+
+            z-index: 900;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 9px;
+        }
+
+
+        .floating-contact a {
+            width: 48px;
+
+            height: 48px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            color: var(--white);
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,0.2);
+
+            transition: var(--transition);
+        }
+
+
+        .floating-contact a:hover {
+            transform: scale(1.1);
+        }
+
+
+        .whatsapp {
+            background: #18b957;
+        }
+
+
+        .phone {
+            background: #1776d2;
+        }
+
+
+        .email {
+            background: var(--red);
+        }
+
+
+        .map {
+            background: var(--blue);
+        }
+
+
+        /* =====================================================
+           SERVICES STRIP
+        ===================================================== */
+
+        .service-strip {
+            background: var(--white);
+
+            border-bottom:
+                1px solid var(--border);
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,0.05);
+        }
+
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+        }
+
+
+        .service-item {
+            padding: 24px 12px;
+
+            text-align: center;
+
+            border-right:
+                1px solid var(--border);
+
+            transition: var(--transition);
+        }
+
+
+        .service-item:nth-child(5) {
+            border-right: 0;
+        }
+
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .service-icon {
+            width: 52px;
+
+            height: 52px;
+
+            margin: 0 auto 10px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 14px;
+
+            background: var(--blue);
+
+            color: var(--white);
+
+            font-size: 23px;
+
+            font-weight: 900;
+        }
+
+
+        .service-item:nth-child(even)
+        .service-icon {
+            background: var(--red);
+        }
+
+
+        .service-item h3 {
+            font-size: 14px;
+
+            line-height: 1.2;
+        }
+
+
+        .service-item p {
+            margin-top: 5px;
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           SECTION TITLES
+        ===================================================== */
+
+        .section-header {
+            max-width: 760px;
+
+            margin-bottom: 42px;
+        }
+
+
+        .section-label {
+            color: var(--red);
+
+            font-size: 13px;
+
+            font-weight: 950;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .section-header h2 {
+            margin-top: 8px;
+
+            font-size:
+                clamp(32px, 5vw, 50px);
+
+            line-height: 1.05;
+
+            letter-spacing: -1px;
+        }
+
+
+        .section-header p {
+            margin-top: 14px;
+
+            color: var(--muted);
+
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1.15fr 0.9fr;
+
+            gap: 25px;
+
+            align-items: stretch;
+        }
+
+
+        .about-card {
+            padding: 32px;
+
+            background: var(--white);
+
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .about-card h2 {
+            margin: 10px 0 15px;
+
+            font-size: 31px;
+
+            line-height: 1.1;
+        }
+
+
+        .about-card p {
+            color: var(--muted);
+        }
+
+
+        .check-list {
+            list-style: none;
+
+            margin: 22px 0;
+        }
+
+
+        .check-list li {
+            margin: 11px 0;
+
+            font-weight: 700;
+        }
+
+
+        .check-list li::before {
+            content: "✓";
+
+            display: inline-grid;
+
+            place-items: center;
+
+            width: 22px;
+
+            height: 22px;
+
+            margin-right: 9px;
+
+            border-radius: 50%;
+
+            background: var(--red);
+
+            color: var(--white);
+
+            font-size: 12px;
+        }
+
+
+        .project-image {
+            position: relative;
+
+            min-height: 430px;
+
+            overflow: hidden;
+
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .project-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .project-badge {
+            position: absolute;
+
+            left: 20px;
+
+            bottom: 20px;
+
+            padding: 11px 17px;
+
+            border-radius: 9px;
+
+            background: var(--red);
+
+            color: var(--white);
+
+            font-weight: 900;
+        }
+
+
+        .contact-card {
+            padding: 32px;
+
+            border-radius: var(--radius);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--blue),
+                    var(--blue-light)
+                );
+
+            color: var(--white);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .contact-card h2 {
+            margin-bottom: 8px;
+
+            font-size: 30px;
+        }
+
+
+        .contact-card > p {
+            color: #dce8f2;
+        }
+
+
+        .contact-line {
+            display: flex;
+
+            gap: 13px;
+
+            margin-top: 22px;
+        }
+
+
+        .contact-line-icon {
+            flex-shrink: 0;
+
+            width: 38px;
+
+            height: 38px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(255,255,255,0.12);
+        }
+
+
+        .contact-line strong {
+            display: block;
+        }
+
+
+        .contact-line small {
+            color: #cbdce9;
+        }
+
+
+        .contact-card .btn {
+            width: 100%;
+
+            margin-top: 25px;
+        }
+
+
+        /* =====================================================
+           SERVICES SECTION
+        ===================================================== */
+
+        .service-cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .service-card {
+            background: var(--white);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 30px;
+
+            transition: var(--transition);
+        }
+
+
+        .service-card:hover {
+            transform: translateY(-7px);
+
+            border-color: transparent;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .service-card-icon {
+            width: 55px;
+
+            height: 55px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 15px;
+
+            background: var(--red);
+
+            color: var(--white);
+
+            font-size: 25px;
+        }
+
+
+        .service-card h3 {
+            margin: 17px 0 8px;
+
+            font-size: 21px;
+        }
+
+
+        .service-card p {
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .process-card {
+            padding: 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            background: var(--white);
+        }
+
+
+        .process-number {
+            width: 45px;
+
+            height: 45px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: var(--red);
+
+            color: var(--white);
+
+            font-weight: 950;
+        }
+
+
+        .process-card h3 {
+            margin: 15px 0 8px;
+        }
+
+
+        .process-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           GALLERY
+        ===================================================== */
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            grid-auto-rows: 230px;
+
+            gap: 15px;
+        }
+
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: var(--blue);
+        }
+
+
+        .gallery-item:first-child {
+            grid-row: span 2;
+        }
+
+
+        .gallery-item img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+
+        .gallery-item:hover img {
+            transform: scale(1.07);
+        }
+
+
+        .gallery-overlay {
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            padding: 20px;
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,.75)
+                );
+        }
+
+
+        .gallery-overlay strong {
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           BENEFITS
+        ===================================================== */
+
+        .benefits {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            border-top:
+                1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .benefit {
+            padding: 27px 18px;
+
+            text-align: center;
+
+            border-right:
+                1px solid var(--border);
+        }
+
+
+        .benefit:last-child {
+            border-right: 0;
+        }
+
+
+        .benefit-icon {
+            font-size: 31px;
+
+            color: var(--red);
+        }
+
+
+        .benefit h3 {
+            margin-top: 6px;
+
+            font-size: 15px;
+        }
+
+
+        .benefit p {
+            margin-top: 3px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           CONTACT SECTION
+        ===================================================== */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr 0.9fr;
+
+            gap: 25px;
+        }
+
+
+        .form-card {
+            padding: 35px;
+
+            background: var(--white);
+
+            border-radius: var(--radius);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .form-card h2 {
+            margin: 8px 0 25px;
+
+            font-size: 34px;
+        }
+
+
+        .form-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 13px;
+
+            font-weight: 900;
+        }
+
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            border: 1px solid var(--border);
+
+            border-radius: 11px;
+
+            padding: 13px 14px;
+
+            outline: none;
+
+            background: #fbfcfd;
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--red);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(215,25,32,.08);
+        }
+
+
+        .form-group textarea {
+            min-height: 150px;
+
+            resize: vertical;
+        }
+
+
+        .form-info {
+            padding: 35px;
+
+            border-radius: var(--radius);
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--blue),
+                    var(--blue-light)
+                );
+        }
+
+
+        .form-info h2 {
+            font-size: 34px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .form-info p {
+            color: #dce8f2;
+        }
+
+
+        .map-box {
+            min-height: 190px;
+
+            margin-top: 25px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbe8f2,
+                    #b7cfe1
+                );
+
+            color: var(--blue);
+
+            font-size: 50px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 55px 0 20px;
+
+            background: var(--blue-dark);
+
+            color: var(--white);
+        }
+
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.4fr 1fr 1fr 1fr;
+
+            gap: 35px;
+        }
+
+
+        .footer-logo {
+            width: 230px;
+
+            margin-bottom: 15px;
+
+            filter:
+                brightness(0)
+                invert(1);
+        }
+
+
+        footer h3 {
+            margin-bottom: 13px;
+
+            font-size: 17px;
+        }
+
+
+        footer p {
+            color: #c5d4e1;
+
+            font-size: 14px;
+        }
+
+
+        footer a {
+            display: block;
+
+            margin: 8px 0;
+
+            color: #c5d4e1;
+
+            font-size: 14px;
+        }
+
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+
+        .footer-bottom {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-top: 35px;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.13);
+
+            color: #9fb3c5;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition:
+                opacity .7s ease,
+                transform .7s ease;
+        }
+
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           BACK TO TOP
+        ===================================================== */
+
+        .back-top {
+            position: fixed;
+
+            right: 18px;
+
+            bottom: 18px;
+
+            width: 48px;
+
+            height: 48px;
+
+            display: none;
+
+            place-items: center;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            background: var(--red);
+
+            color: var(--white);
+
+            font-size: 21px;
+
+            cursor: pointer;
+
+            z-index: 950;
+        }
+
+
+        .back-top.show {
+            display: grid;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .nav-links {
+                gap: 14px;
+            }
+
+
+            .header-button {
+                display: none;
+            }
+
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(5, 1fr);
+            }
+
+
+            .about-grid {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .contact-card {
+                grid-column: 1 / -1;
+            }
+
+
+            .process-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .benefits {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .footer-grid {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 780px) {
+
+            .top-contact {
+                gap: 8px;
+
+                font-size: 11px;
+            }
+
+
+            .top-contact span:nth-child(2),
+            .top-social {
+                display: none;
+            }
+
+
+            .nav-inner {
+                min-height: 70px;
+            }
+
+
+            .logo {
+                width: 205px;
+
+                height: 60px;
+            }
+
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .menu-button {
+                display: block;
+            }
+
+
+            .hero {
+                min-height: 680px;
+
+                background-position:
+                    65% center;
+            }
+
+
+            .hero-content {
+                padding: 70px 0;
+            }
+
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .service-item {
+                border-bottom:
+                    1px solid var(--border);
+            }
+
+
+            .about-grid,
+            .service-cards,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .project-image {
+                min-height: 320px;
+            }
+
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+
+                grid-auto-rows: 190px;
+            }
+
+
+            .gallery-item:first-child {
+                grid-column: 1 / -1;
+
+                grid-row: span 1;
+            }
+
+
+            .benefits {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .benefit {
+                border-bottom:
+                    1px solid var(--border);
+            }
+
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .floating-contact {
+                right: 9px;
+            }
+
+
+            .floating-contact a {
+                width: 43px;
+
+                height: 43px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+
+            .hero-buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery-item:first-child {
+                grid-column: auto;
+            }
+
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+
+            .benefit {
+                border-right: 0;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <div class="top-contact">
+
+            <span>
+                📍 Kiefernpfad 9, 30657 Hannover
+            </span>
+
+            <span>
+                ✉ info@renas-trockenbau.de
+            </span>
+
+            <span>
+                ☎ 0176 306 997 02
+            </span>
+
+        </div>
+
+
+        <div class="top-social">
+
+            <a href="#" aria-label="Facebook">
+                Facebook
+            </a>
+
+            <a href="#" aria-label="Instagram">
+                Instagram
+            </a>
+
+            <a href="#" aria-label="YouTube">
+                YouTube
+            </a>
+
+            <a href="#" aria-label="TikTok">
+                TikTok
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="#start">
+
+            <img
+                class="logo"
+                src="renass-logo.jpg"
+                alt="RENASS TROCKENBAU MANAGER Logo"
+            >
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a
+                class="active"
+                href="#start"
+            >
+                Startseite
+            </a>
+
+            <a href="#leistungen">
+                Leistungen
+            </a>
+
+            <a href="#ueber-uns">
+                Über uns
+            </a>
+
+            <a href="#ablauf">
+                Ablauf
+            </a>
+
+            <a href="#galerie">
+                Galerie
+            </a>
+
+            <a href="#kontakt">
+                Kontakt
+            </a>
+
+        </nav>
+
+
+        <a
+            class="header-button"
+            href="#kontakt"
+        >
+            Angebot anfordern
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Menü öffnen"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <a href="#start">
+            Startseite
+        </a>
+
+        <a href="#leistungen">
+            Leistungen
+        </a>
+
+        <a href="#ueber-uns">
+            Über uns
+        </a>
+
+        <a href="#ablauf">
+            Ablauf
+        </a>
+
+        <a href="#galerie">
+            Galerie
+        </a>
+
+        <a href="#kontakt">
+            Kontakt
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="hero"
+    id="start"
+>
+
+    <div class="container">
+
+        <div class="hero-content reveal">
+
+            <div class="hero-label">
+                Professioneller Trockenbau
+            </div>
+
+
+            <h1>
+
+                <span class="red">
+                    RENASS
+                </span>
+
+                <br>
+
+                TROCKENBAU
+
+                <br>
+
+                MANAGER
+
+            </h1>
+
+
+            <h2>
+                Moderne Lösungen für
+                Zuhause und Gewerbe
+            </h2>
+
+
+            <p class="hero-text">
+
+                Professioneller Trockenbau,
+                Innenausbau, Decken,
+                Gipskarton, Trennwände,
+                Dämmung, Renovierung und
+                Malerarbeiten in Hannover
+                und Niedersachsen.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    class="btn btn-red"
+                    href="#kontakt"
+                >
+                    Projekt anfragen →
+                </a>
+
+
+                <a
+                    class="btn btn-outline"
+                    href="#leistungen"
+                >
+                    Unsere Leistungen →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES STRIP
+========================================================= -->
+
+<section
+    class="service-strip"
+    id="leistungen"
+>
+
+    <div class="container services-grid">
+
+
+        <article class="service-item reveal">
+
+            <div class="service-icon">
+                ▱
+            </div>
+
+            <h3>
+                Trockenbau
+            </h3>
+
+            <p>
+                Professionelle Lösungen
+            </p>
+
+        </article>
+
+
+        <article class="service-item reveal">
+
+            <div class="service-icon">
+                ⌁
+            </div>
+
+            <h3>
+                Abgehängte Decken
+            </h3>
+
+            <p>
+                Moderne Deckensysteme
+            </p>
+
+        </article>
+
+
+        <article class="service-item reveal">
+
+            <div class="service-icon">
+                ▧
+            </div>
+
+            <h3>
+                Innenausbau
+            </h3>
+
+            <p>
+                Individuell & funktional
+            </p>
+
+        </article>
+
+
+        <article class="service-item reveal">
+
+            <div class="service-icon">
+                ▥
+            </div>
+
+            <h3>
+                Gipskartonarbeiten
+            </h3>
+
+            <p>
+                Präzise Ausführung
+            </p>
+
+        </article>
+
+
+        <article class="service-item reveal">
+
+            <div class="service-icon">
+                ⚒
+            </div>
+
+            <h3>
+                Trennwände
+            </h3>
+
+            <p>
+                Flexibel & individuell
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    class="section"
+    id="ueber-uns"
+>
+
+    <div class="container about-grid">
+
+
+        <div class="about-card reveal">
+
+            <div class="section-label">
+                Über uns
+            </div>
+
+
+            <h2>
+                Ihre Räume.
+                Unsere Lösung.
+            </h2>
+
+
+            <p>
+
+                RENASS TROCKENBAU MANAGER
+                steht für professionelle
+                Trockenbau- und
+                Innenausbauarbeiten mit
+                einem klaren Fokus auf
+                Qualität, Sauberkeit und
+                zuverlässige Ausführung.
+
+            </p>
+
+
+            <ul class="check-list">
+
+                <li>
+                    Erfahrene Ausführung
+                </li>
+
+                <li>
+                    Faire und transparente Preise
+                </li>
+
+                <li>
+                    Saubere Arbeit
+                </li>
+
+                <li>
+                    Zuverlässige Termine
+                </li>
+
+                <li>
+                    Persönliche Beratung
+                </li>
+
+            </ul>
+
+
+            <a
+                class="btn btn-red"
+                href="#kontakt"
+            >
+                Projekt besprechen →
+            </a>
+
+        </div>
+
+
+
+        <div class="project-image reveal">
+
+            <img
+                src="hero-trockenbau.jpg"
+                alt="RENASS Trockenbau Projekt"
+            >
+
+            <div class="project-badge">
+                RENASS TROCKENBAU MANAGER
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-card reveal">
+
+            <h2>
+                Kontakt
+            </h2>
+
+
+            <p>
+                Wir sind für Sie erreichbar.
+            </p>
+
+
+            <div class="contact-line">
+
+                <div class="contact-line-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <strong>
+                        0176 306 997 02
+                    </strong>
+
+                    <small>
+                        WhatsApp / Anruf
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <div class="contact-line-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <strong>
+                        info@renas-trockenbau.de
+                    </strong>
+
+                    <small>
+                        E-Mail
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <div class="contact-line-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Kiefernpfad 9
+                    </strong>
+
+                    <small>
+                        30657 Hannover
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <a
+                class="btn btn-red"
+                href="https://www.google.com/maps/search/?api=1&query=Kiefernpfad+9%2C+30657+Hannover"
+                target="_blank"
+                rel="noopener"
+            >
+                Route starten →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ALL SERVICES
+========================================================= -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+
+        <div class="section-header reveal">
+
+            <div class="section-label">
+                Unsere Leistungen
+            </div>
+
+            <h2>
+                Alles aus einer Hand
+            </h2>
+
+            <p>
+
+                Professionelle Lösungen für
+                Wohnungen, Häuser, Gewerbe
+                und Renovierungsprojekte.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-cards">
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ▱
+                </div>
+
+                <h3>
+                    Trockenbau
+                </h3>
+
+                <p>
+                    Moderne Trockenbaulösungen
+                    für neue Räume,
+                    Umbauten und Renovierungen.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ⌁
+                </div>
+
+                <h3>
+                    Abgehängte Decken
+                </h3>
+
+                <p>
+                    Moderne Deckensysteme
+                    für Design, Beleuchtung
+                    und Funktionalität.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ▧
+                </div>
+
+                <h3>
+                    Innenausbau
+                </h3>
+
+                <p>
+                    Individuelle Raumlösungen
+                    für private und gewerbliche
+                    Innenbereiche.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ▥
+                </div>
+
+                <h3>
+                    Gipskartonarbeiten
+                </h3>
+
+                <p>
+                    Präzise Verarbeitung von
+                    Gipskarton für Wände,
+                    Decken und Raumlösungen.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ▤
+                </div>
+
+                <h3>
+                    Trennwände
+                </h3>
+
+                <p>
+                    Flexible Raumaufteilung
+                    mit stabilen und modernen
+                    Trennwandsystemen.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ⌂
+                </div>
+
+                <h3>
+                    Dämmung & Isolierung
+                </h3>
+
+                <p>
+                    Lösungen für Wärme,
+                    Energieeffizienz und
+                    verbesserten Wohnkomfort.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ⚒
+                </div>
+
+                <h3>
+                    Rückbau & Demontage
+                </h3>
+
+                <p>
+                    Sauberer Rückbau und
+                    professionelle Vorbereitung
+                    für neue Projekte.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ▰
+                </div>
+
+                <h3>
+                    Neue Decken
+                </h3>
+
+                <p>
+                    Moderne und hochwertige
+                    Deckengestaltung für
+                    unterschiedliche Räume.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ↻
+                </div>
+
+                <h3>
+                    Renovierung
+                </h3>
+
+                <p>
+                    Modernisierung und
+                    Auffrischung von Innenräumen
+                    mit sauberer Ausführung.
+                </p>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-card-icon">
+                    ▰
+                </div>
+
+                <h3>
+                    Malerarbeiten
+                </h3>
+
+                <p>
+                    Saubere Wand- und
+                    Deckenarbeiten für ein
+                    professionelles Ergebnis.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section
+    class="section"
+    id="ablauf"
+>
+
+    <div class="container">
+
+
+        <div class="section-header reveal">
+
+            <div class="section-label">
+                Unser Ablauf
+            </div>
+
+            <h2>
+                Von der Anfrage bis zum Projekt
+            </h2>
+
+            <p>
+                Einfach, transparent und
+                persönlich.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Anfrage
+                </h3>
+
+                <p>
+                    Sie kontaktieren uns
+                    telefonisch, per WhatsApp
+                    oder über das Formular.
+                </p>
+
+            </article>
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Beratung
+                </h3>
+
+                <p>
+                    Wir besprechen Ihr Projekt,
+                    Ihre Wünsche und den
+                    gewünschten Ablauf.
+                </p>
+
+            </article>
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Angebot
+                </h3>
+
+                <p>
+                    Sie erhalten eine
+                    transparente Einschätzung
+                    für Ihr Vorhaben.
+                </p>
+
+            </article>
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Umsetzung
+                </h3>
+
+                <p>
+                    Das Projekt wird
+                    professionell, sauber und
+                    zuverlässig umgesetzt.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section
+    class="section section-light"
+    id="galerie"
+>
+
+    <div class="container">
+
+
+        <div class="section-header reveal">
+
+            <div class="section-label">
+                Galerie
+            </div>
+
+            <h2>
+                Einblicke in unsere Arbeit
+            </h2>
+
+            <p>
+                Hier können später Ihre echten
+                Projektbilder und Vorher/Nachher-
+                Aufnahmen eingesetzt werden.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                    src="hero-trockenbau.jpg"
+                    alt="Trockenbau Projekt"
+                >
+
+                <div class="gallery-overlay">
+
+                    <strong>
+                        Moderne Innenräume
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                    src="hero-trockenbau.jpg"
+                    alt="Deckensystem"
+                >
+
+                <div class="gallery-overlay">
+
+                    <strong>
+                        Deckensysteme
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                    src="hero-trockenbau.jpg"
+                    alt="Innenausbau"
+                >
+
+                <div class="gallery-overlay">
+
+                    <strong>
+                        Innenausbau
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                    src="hero-trockenbau.jpg"
+                    alt="Gipskarton"
+                >
+
+                <div class="gallery-overlay">
+
+                    <strong>
+                        Gipskartonarbeiten
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item reveal">
+
+                <img
+                    src="hero-trockenbau.jpg"
+                    alt="Renovierung"
+                >
+
+                <div class="gallery-overlay">
+
+                    <strong>
+                        Renovierung
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BENEFITS
+========================================================= -->
+
+<section class="benefits">
+
+
+    <div class="benefit reveal">
+
+        <div class="benefit-icon">
+            ✓
+        </div>
+
+        <h3>
+            Zuverlässig
+        </h3>
+
+        <p>
+            Termintreue Planung
+        </p>
+
+    </div>
+
+
+    <div class="benefit reveal">
+
+        <div class="benefit-icon">
+            ★
+        </div>
+
+        <h3>
+            Qualität
+        </h3>
+
+        <p>
+            Saubere Ausführung
+        </p>
+
+    </div>
+
+
+    <div class="benefit reveal">
+
+        <div class="benefit-icon">
+            ◆
+        </div>
+
+        <h3>
+            Transparenz
+        </h3>
+
+        <p>
+            Klare Kommunikation
+        </p>
+
+    </div>
+
+
+    <div class="benefit reveal">
+
+        <div class="benefit-icon">
+            ☎
+        </div>
+
+        <h3>
+            Beratung
+        </h3>
+
+        <p>
+            Persönlich erreichbar
+        </p>
+
+    </div>
+
+
+    <div class="benefit reveal">
+
+        <div class="benefit-icon">
+            ♡
+        </div>
+
+        <h3>
+            Zufriedenheit
+        </h3>
+
+        <p>
+            Ihr Projekt im Mittelpunkt
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    class="section section-light"
+    id="kontakt"
+>
+
+    <div class="container contact-grid">
+
+
+        <!-- FORM -->
+
+        <div class="form-card reveal">
+
+            <div class="section-label">
+                Anfrage senden
+            </div>
+
+
+            <h2>
+                Ihr Projekt beginnt hier
+            </h2>
+
+
+            <form
+                id="contactForm"
+            >
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Ihr Name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Telefon *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            required
+                            placeholder="0176 ..."
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="email">
+                            E-Mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="ihre@email.de"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="service">
+                            Gewünschte Leistung
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                        >
+
+                            <option>
+                                Trockenbau
+                            </option>
+
+                            <option>
+                                Abgehängte Decken
+                            </option>
+
+                            <option>
+                                Innenausbau
+                            </option>
+
+                            <option>
+                                Gipskartonarbeiten
+                            </option>
+
+                            <option>
+                                Trennwände
+                            </option>
+
+                            <option>
+                                Dämmung & Isolierung
+                            </option>
+
+                            <option>
+                                Rückbau & Demontage
+                            </option>
+
+                            <option>
+                                Neue Decken
+                            </option>
+
+                            <option>
+                                Renovierung
+                            </option>
+
+                            <option>
+                                Malerarbeiten
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="message">
+                            Nachricht *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                            placeholder="Beschreiben Sie kurz Ihr Projekt..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn btn-red"
+                    type="submit"
+                >
+                    Anfrage senden →
+                </button>
+
+
+                <p
+                    id="formMessage"
+                    style="
+                        margin-top:15px;
+                        color:#657487;
+                        font-size:13px;
+                    "
+                ></p>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- CONTACT INFO -->
+
+        <div class="form-info reveal">
+
+            <div class="section-label"
+                 style="color:#ff4b51;">
+                Hannover · Niedersachsen
+            </div>
+
+
+            <h2>
+                RENASS TROCKENBAU
+                MANAGER
+            </h2>
+
+
+            <p>
+                Ihr Ansprechpartner für
+                Trockenbau und Innenausbau
+                in Hannover.
+            </p>
+
+
+            <div class="contact-line">
+
+                <div class="contact-line-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Kiefernpfad 9
+                    </strong>
+
+                    <small>
+                        30657 Hannover
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <div class="contact-line-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <strong>
+                        0176 306 997 02
+                    </strong>
+
+                    <small>
+                        Telefon / WhatsApp
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <div class="contact-line-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <strong>
+                        info@renas-trockenbau.de
+                    </strong>
+
+                    <small>
+                        E-Mail
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="map-box">
+                📍
+            </div>
+
+
+            <a
+                class="btn btn-red"
+                href="https://www.google.com/maps/search/?api=1&query=Kiefernpfad+9%2C+30657+Hannover"
+                target="_blank"
+                rel="noopener"
+                style="margin-top:20px;"
+            >
+                Google Maps öffnen →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <img
+                class="footer-logo"
+                src="renass-logo.jpg"
+                alt="RENASS TROCKENBAU MANAGER"
+            >
+
+            <p>
+
+                Professioneller Trockenbau,
+                Innenausbau und Renovierung
+                in Hannover und Niedersachsen.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="#start">
+                Startseite
+            </a>
+
+            <a href="#leistungen">
+                Leistungen
+            </a>
+
+            <a href="#ueber-uns">
+                Über uns
+            </a>
+
+            <a href="#ablauf">
+                Ablauf
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Leistungen
+            </h3>
+
+            <a href="#leistungen">
+                Trockenbau
+            </a>
+
+            <a href="#leistungen">
+                Innenausbau
+            </a>
+
+            <a href="#leistungen">
+                Deckensysteme
+            </a>
+
+            <a href="#leistungen">
+                Gipskarton
+            </a>
+
+            <a href="#leistungen">
+                Renovierung
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Kontakt
+            </h3>
+
+            <a href="tel:+4917630699702">
+                ☎ 0176 306 997 02
+            </a>
+
+            <a href="mailto:info@renas-trockenbau.de">
+                ✉ info@renas-trockenbau.de
+            </a>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Kiefernpfad+9%2C+30657+Hannover"
+                target="_blank"
+                rel="noopener"
+            >
+                📍 Kiefernpfad 9,
+                30657 Hannover
+            </a>
+
+            <a
+                href="https://wa.me/4917630699702"
+                target="_blank"
+                rel="noopener"
+            >
+                WhatsApp schreiben
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © <span id="currentYear"></span>
+            RENASS TROCKENBAU MANAGER.
+            Alle Rechte vorbehalten.
+        </span>
+
+        <span>
+            Impressum · Datenschutz · AGB
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     FLOATING BUTTONS
+========================================================= -->
+
+<div class="floating-contact">
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/4917630699702"
+        target="_blank"
+        rel="noopener"
+        title="WhatsApp"
+    >
+        WA
+    </a>
+
+
+    <a
+        class="phone"
+        href="tel:+4917630699702"
+        title="Telefon"
+    >
+        ☎
+    </a>
+
+
+    <a
+        class="email"
+        href="mailto:info@renas-trockenbau.de"
+        title="E-Mail"
+    >
+        ✉
+    </a>
+
+
+    <a
+        class="map"
+        href="https://www.google.com/maps/search/?api=1&query=Kiefernpfad+9%2C+30657+Hannover"
+        target="_blank"
+        rel="noopener"
+        title="Google Maps"
+    >
+        📍
+    </a>
+
+</div>
+
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+    class="back-top"
+    id="backTop"
+    aria-label="Nach oben"
+>
+    ↑
+</button>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            mobileMenu.classList.toggle("open");
+
+            if (
+                mobileMenu.classList.contains("open")
+            ) {
+
+                menuButton.textContent = "×";
+
+            } else {
+
+                menuButton.textContent = "☰";
+
+            }
+
+        }
+    );
+
+
+    document
+        .querySelectorAll(".mobile-menu a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    mobileMenu.classList.remove("open");
+
+                    menuButton.textContent = "☰";
+
+                }
+            );
+
+        });
+
+
+
+    /* =========================================
+       SCROLL ANIMATION
+    ========================================= */
+
+    const revealObserver =
+        new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(
+                    function(entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target
+                                .classList
+                                .add("visible");
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(function(element) {
+
+            revealObserver.observe(element);
+
+        });
+
+
+
+    /* =========================================
+       BACK TO TOP
+    ========================================= */
+
+    const backTop =
+        document.getElementById("backTop");
+
+
+    window.addEventListener(
+        "scroll",
+        function() {
+
+            if (
+                window.scrollY > 500
+            ) {
+
+                backTop.classList.add("show");
+
+            } else {
+
+                backTop.classList.remove("show");
+
+            }
+
+        }
+    );
+
+
+    backTop.addEventListener(
+        "click",
+        function() {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+
+
+    /* =========================================
+       CURRENT YEAR
+    ========================================= */
+
+    document.getElementById(
+        "currentYear"
+    ).textContent =
+        new Date().getFullYear();
+
+
+
+    /* =========================================
+       CONTACT FORM
+       Öffnet eine vorbereitete E-Mail
+    ========================================= */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+
+    contactForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById(
+                    "name"
+                ).value.trim();
+
+
+            const phone =
+                document.getElementById(
+                    "phone"
+                ).value.trim();
+
+
+            const email =
+                document.getElementById(
+                    "email"
+                ).value.trim();
+
+
+            const service =
+                document.getElementById(
+                    "service"
+                ).value;
+
+
+            const message =
+                document.getElementById(
+                    "message"
+                ).value.trim();
+
+
+            const subject =
+                encodeURIComponent(
+                    "Projektanfrage - "
+                    + service
+                    + " - "
+                    + name
+                );
+
+
+            const body =
+                encodeURIComponent(
+
+                    "Neue Anfrage über die Website\n\n"
+
+                    + "Name: "
+                    + name
+
+                    + "\nTelefon: "
+                    + phone
+
+                    + "\nE-Mail: "
+                    + email
+
+                    + "\nLeistung: "
+                    + service
+
+                    + "\n\nNachricht:\n"
+                    + message
+
+                );
+
+
+            window.location.href =
+                "mailto:info@renas-trockenbau.de"
+                + "?subject="
+                + subject
+                + "&body="
+                + body;
+
+
+            document.getElementById(
+                "formMessage"
+            ).textContent =
+                "Ihre Anfrage wurde vorbereitet. "
+                + "Bitte senden Sie die E-Mail.";
+
+        }
+    );
+
+
+
+    /* =========================================
+       ACTIVE NAVIGATION
+    ========================================= */
+
+    const sections =
+        document.querySelectorAll(
+            "main section[id]"
+        );
+
+
+    const navLinks =
+        document.querySelectorAll(
+            ".nav-links a"
+        );
+
+
+    window.addEventListener(
+        "scroll",
+        function() {
+
+            let current =
+                "start";
+
+
+            sections.forEach(
+                function(section) {
+
+                    const sectionTop =
+                        section.offsetTop - 150;
+
+
+                    if (
+                        window.scrollY >= sectionTop
+                    ) {
+
+                        current =
+                            section.getAttribute(
+                                "id"
+                            );
+
+                    }
+
+                }
+            );
+
+
+            navLinks.forEach(
+                function(link) {
+
+                    link.classList.remove(
+                        "active"
+                    );
+
+
+                    if (
+                        link.getAttribute(
+                            "href"
+                        )
+                        === "#"
+                        + current
+                    ) {
+
+                        link.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+</html>
             
         
